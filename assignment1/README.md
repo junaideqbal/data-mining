@@ -1,7 +1,7 @@
-Apriori Algorithm with Weka Results
+# Apriori Algorithm with Weka Results
 
-![Alt text](assignment1/Apriori-Results.PNG?raw=true "Result")
+![Alt text](Apriori-Results.PNG?raw=true "Result")
 
-FP-Growth Algorithm with Weka Results
+# FP-Growth Algorithm with Weka Results
 
-![Alt text](assignment1/Apriori-Results.PNG "Result")
+![Alt text](FP-Growth-Results.PNG "Result")
