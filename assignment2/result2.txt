@@ -1,0 +1,115 @@
+=== Run information ===
+
+Scheme:       weka.clusterers.SimpleKMeans -init 0 -max-candidates 100 -periodic-pruning 10000 -min-density 2.0 -t1 -1.25 -t2 -1.0 -N 3 -A "weka.core.EuclideanDistance -R first-last" -I 500 -num-slots 1 -S 10
+Relation:     soybean-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    683
+Attributes:   35
+              plant-stand
+              precip
+              temp
+              hail
+              crop-hist
+              area-damaged
+              severity
+              seed-tmt
+              germination
+              plant-growth
+              leaves
+              leafspots-halo
+              leafspots-marg
+              leafspot-size
+              leaf-shread
+              leaf-malf
+              leaf-mild
+              stem
+              lodging
+              stem-cankers
+              canker-lesion
+              fruiting-bodies
+              external-decay
+              mycelium
+              int-discolor
+              sclerotia
+              fruit-pods
+              fruit-spots
+              seed
+              mold-growth
+              seed-discolor
+              seed-size
+              shriveling
+              roots
+              class
+Test mode:    evaluate on training data
+
+
+=== Clustering model (full training set) ===
+
+
+kMeans
+======
+
+Number of iterations: 4
+Within cluster sum of squared errors: 5677.0
+
+Initial starting points (random):
+
+Cluster 0: normal,gt-norm,norm,yes,same-lst-two-yrs,whole-field,severe,fungicide,80-89,norm,abnorm,no-yellow-halos,w-s-marg,gt-1/8,absent,absent,absent,abnorm,yes,absent,tan,present,firm-and-dry,absent,none,absent,norm,absent,norm,absent,absent,norm,absent,norm,brown-spot
+Cluster 1: lt-normal,gt-norm,norm,yes,same-lst-sev-yrs,whole-field,pot-severe,none,lt-80,norm,abnorm,no-yellow-halos,w-s-marg,gt-1/8,present,absent,absent,norm,yes,absent,dna,absent,absent,absent,none,absent,norm,absent,norm,absent,absent,norm,absent,norm,brown-spot
+Cluster 2: normal,gt-norm,lt-norm,yes,same-lst-two-yrs,upper-areas,minor,fungicide,80-89,norm,abnorm,no-yellow-halos,w-s-marg,lt-1/8,absent,absent,absent,abnorm,yes,absent,tan,absent,absent,absent,none,absent,diseased,colored,abnorm,absent,present,norm,absent,norm,purple-seed-stain
+
+Missing values globally replaced with mean/mode
+
+Final cluster centroids:
+                                                            Cluster#
+Attribute                               Full Data                  0                  1                  2
+                                          (683.0)            (241.0)            (402.0)             (40.0)
+==========================================================================================================
+plant-stand                                normal             normal             normal             normal
+precip                                    gt-norm            gt-norm            gt-norm            gt-norm
+temp                                         norm               norm               norm            gt-norm
+hail                                          yes                yes                yes                yes
+crop-hist                        same-lst-two-yrs   same-lst-two-yrs   same-lst-sev-yrs   same-lst-sev-yrs
+area-damaged                            low-areas          low-areas          low-areas        whole-field
+severity                               pot-severe         pot-severe         pot-severe              minor
+seed-tmt                                     none               none               none               none
+germination                                 80-89              80-89              80-89              80-89
+plant-growth                                 norm               norm               norm               norm
+leaves                                     abnorm             abnorm             abnorm               norm
+leafspots-halo                    no-yellow-halos             absent    no-yellow-halos    no-yellow-halos
+leafspots-marg                           w-s-marg                dna           w-s-marg           w-s-marg
+leafspot-size                              gt-1/8                dna             gt-1/8             gt-1/8
+leaf-shread                                absent             absent             absent             absent
+leaf-malf                                  absent             absent             absent             absent
+leaf-mild                                  absent             absent             absent             absent
+stem                                       abnorm             abnorm               norm             abnorm
+lodging                                       yes                yes                yes                yes
+stem-cankers                               absent      above-sec-nde             absent             absent
+canker-lesion                                 dna       dk-brown-blk                dna                tan
+fruiting-bodies                            absent             absent             absent             absent
+external-decay                             absent       firm-and-dry             absent             absent
+mycelium                                   absent             absent             absent             absent
+int-discolor                                 none               none               none               none
+sclerotia                                  absent             absent             absent             absent
+fruit-pods                                   norm               norm               norm           diseased
+fruit-spots                                absent                dna             absent brown-w/blk-specks
+seed                                         norm               norm               norm             abnorm
+mold-growth                                absent             absent             absent             absent
+seed-discolor                              absent             absent             absent            present
+seed-size                                    norm               norm               norm               norm
+shriveling                                 absent             absent             absent             absent
+roots                                        norm               norm               norm               norm
+class                                  brown-spot frog-eye-leaf-spot         brown-spot  purple-seed-stain
+
+
+
+
+Time taken to build model (full training data) : 0.03 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      241 ( 35%)
+1      402 ( 59%)
+2       40 (  6%)
+
